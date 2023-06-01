@@ -17,7 +17,12 @@ D. Upon loading the site you should be greeted by prompts
 ## Credits
 
 Used chaptGPT for assistance for various things, and to clarify usage in the code.
+Generated card coloring with https://neumorphism.io/
 
 ## License
 
 N/A
+
+## Visuals
+
+![image](screencapture-averyjmyers-github-io-challenge-4-trivia-site-2023-05-31-21_57_21.png)
