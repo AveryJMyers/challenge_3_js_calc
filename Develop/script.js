@@ -20,6 +20,14 @@ function passwordQuestions(){
   var includeLowercase = confirm("Select OK to include lowercase letters.");
   var includeNumbers = confirm("Select OK to include numbers.");
   var includeSpecialChars = confirm("Select OK to include special characters.");
+  return {
+    passwordLength: passwordLength,
+    includeUppercase: includeUppercase,
+    includeLowercase: includeLowercase,
+    includeNumbers: includeNumbers,
+    includeSpecialChars: includeSpecialChars
+};
+
 
   //booleans effected by the user responses
   includeUppercase = includeUppercase === true;
