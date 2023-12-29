@@ -155,5 +155,44 @@ function passwordQuestions(){
 }
 
 function generatePassword(passwordLength, includeUppercase, includeLowercase, includeNumbers, includeSpecialChars){
-  // [The rest of your generatePassword function remains the same]
+  //define character sets for each option
+  
+  var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+  var numberChars = "0123456789";
+  var specialChars = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
+
+  //creates an empty string and an empty array
+  var newPassword = "";
+  var charSets = [];
+
+  //checks the boolean, puses the characters if true.
+  if(includeUppercase){
+    charSets.push(uppercaseChars);
+  }
+  if(includeLowercase){
+    charSets.push(lowercaseChars);
+  }
+  if(includeNumbers){
+    charSets.push(numberChars);
+  }
+
+  if(includeSpecialChars)
+    charSets.push(specialChars);
+
+  // creates an error if the user doesn't select any character types.
+  if(charSets.length === 0){
+    alert("Please select at least one character type.");
+    return;
+  }
+
+//selects random charSet, then chooses a random letter from the random charSet until the password length is complete. 
+  for (var i = 0; i < passwordLength; i++){
+      var randomCharSet=charSets[Math.floor(Math.random() * charSets.length)];
+      randomChar=randomCharSet[Math.floor(Math.random() * randomCharSet.length)];
+      newPassword += randomChar;
+  }
+
+    
+  return newPassword;
 }
